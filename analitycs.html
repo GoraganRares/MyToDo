@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['', 'Comenzi acceptate', 'Comenzi anulate', 'Total comenzi'],
+          ['',  0, 0, 0],
+          ['',  0, 0, 0],
+          ['',  4, 1, 5],
+          ['',  1, 1, 4],
+          ['',  2, 0, 3],
+          ['',  1, 0, 1],
+          ['',  10, 0, 10],
+          ['',  6, 6, 0],
+          ['',  0, 0, 0],
+          ['',  0, 0, 0],
+          ['',  4, 3, 5],
+          ['',  3, 3, 3],
+          ['',  1, 0, 1],
+          ['',  0, 0, 0],
+          ['',  0, 0, 0],
+          ['',  0, 0, 0],
+
+
+        ]);
+
+        var options = {
+          title: 'Analitycs comenzi',
+          curveType: 'function',
+          legend: { position: 'top' },
+          colors: ['#00D814', '#CB0D0D', '#000000'],
+          
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyToDo</title>    
+    <link rel="shortcut icon" href="/static/content/Logo-icon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/css.css">
+    <link rel="stylesheet" href="/static/css/hamburgers.min.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.css">
+</head>
+<body>
+<!-- Navigation Bar -->
+  <nav id="navbar-scroll-blue" class="navigation padding-all bg-blue">
+    <div class="nav-container">
+        <a href="#header" class="nav-logo">
+            <img class="logo" src="static/content/Horizontal-Color.svg">
+        </a>
+        <ul class="nav-list">
+            <div class="flex nav not-nav">
+                <li class="nav-item dropdown">
+                    <button onclick="myFunction()" class="dropbtn nav-link">Comenzi</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="analiza-discord.html">In asteptare</a>
+                        <a href="incepatori.html">Comenzi noi</a>
+                        <a href="intermediar.html">Comenzi terminate</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <button onclick="myFunction()" class="dropbtn nav-link">Mesaje</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="analiza-discord.html">
+                            <img src="/static/content/tjmiles.webp" alt="picture-logo">
+                            <div class="message-bog flex row">
+                                <h5 class="username">username21</h5>
+                                <span>abia aștept să colaborăm...</span>
+                                <span class="hours-ago">Acum 69 de zile</span>
+                            </div>
+                        </a>
+                        <a href="incepatori.html">Comenzi noi</a>
+                        <a href="intermediar.html">Comenzi terminate</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href='#about' class="nav-link">Prestează servicii</a>
+                </li>
+                <li class="nav-item">
+                    <a href='#services' class="nav-link">Promovează-te</a>
+                </li>
+                <li class="nav-item">
+                    <a href='#portofolio' class="nav-link"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href='#contact' class="nav-link button">Login/sign up</a>
+                </li>
+            </div> 
+        </ul>
+        <div class="hamburger hamburger--spin fixed">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
+        </div>
+    </div>
+</nav>   
+
+<section class="chart-container padding-all not-fullscreen">
+    <div id="curve_chart" style="width: 100%; height: 100%; min-height: 700px;"></div>
+</section>
+
+<section class="analytics-promovare padding-all not-fullscreen">
+    <h2 class="title">Analytics Promovare</h2>
+    <div class="box-up flex row">
+        <div class="box flex column">
+            <span class="blue-color margin20">persoane care ti-au accesat profilul</span>
+            <span class="title blue-color">12</span>
+        </div>
+        <div class="box flex column">
+            <span class="blue-color margin20">vizualizări în pagină</span>
+            <span class="title blue-color">87</span>
+        </div>
+        <div class="box flex column">
+            <span class="blue-color margin20">persoane care te-au contactat</span>
+            <span class="title blue-color">4</span>
+        </div>
+        <div class="box flex column">
+            <span class="blue-color margin20">zile rămase de promovare</span>
+            <span   class="title blue-color">2</span>
+        </div>
+    </div>
+</section>
+ 
+<footer class="footer-container not-fullscreen padding-all">
+  <div class="footer-slogan not-fullscreen flex row">
+      <div class="left-container flex column">
+          <h4 class="title">Hai în breasla to do-erilor</h4>
+          <p class="black-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et imperdiet quam. Morbi scelerisque nec dolor sed sollicitudin. Quisque sit amet magna et lorem luctus iaculis vel</p><p class="black-color hide margin40">vitae lacus. Sed ultricies egestas velit, scelerisque suscipit erat consequat quis. Proin elementum, ipsum a tincidunt elementum, ex tortor luctus urna, ac aliquam arcu justo a quam. Sed facilisis nibh in varius fringilla. Nulla scelerisque odio eu nisl ultrices,</p>
+          <button class="button blue-color">get started</button>
+      </div>
+      <img class="img-footer" src="/static/content/neamarin-footer.webp" alt="like"/>
+  </div>
+  <div class="footer-up flex row">
+      <img class="logo margin-botom" src="static/content/Horizontal-Color.svg" alt="logo">
+      <div class="flex column social-media">
+          <h4 class="footer-a">Informații</h4>
+          <a class="text-underline margin-botom" target="_blank" href="">Termeni și condiții</a>
+          <a class="text-underline margin-botom" target="_blank" href="">Politica Cookies</a>
+          <a class="text-underline margin-botom" target="_blank" href="">Politica de confidentialitate</a>
+      </div>
+      <div>
+      <h4 class="footer-a">Navigație</h4>
+          <ul class="nav-list">
+              <div class="flex column">
+                  <li class="nav-item margin-botom">
+                      <a href='' class="nav-link">Prestează servicii</a>
+                  </li>
+                  <li class="nav-item margin-botom">
+                      <a href='' class="nav-link">Logare</a>
+                  </li>
+                  <li class="nav-item margin-botom">
+                      <a href='' class="nav-link">Promovează-te</a>
+                  </li>
+              </div> 
+          </ul>
+      </div>
+      <div class="contact flex column">
+          <h4 class="footer-a">Contact</h4>
+          <a class="info margin20 flex row margin-botom" href=""><i class="fa fa-envelope-o color-green" aria-hidden="true"></i>exemplu@gmail.com</a>
+          <a class="info margin20 flex row margin-botom" href="https://www.google.com/maps/place/bl+2,+Bulevardul+Metalurgiei+61,+Bucure%C8%99ti+041832/@44.3720592,26.1231031,17z/data=!3m1!4b1!4m5!3m4!1s0x40b1fe05cd3502ab:0xa2e7db87d2960ea9!8m2!3d44.3720592!4d26.1252918"><i class="fa fa-map-marker color-green" aria-hidden="true"></i><span>Oraș, Județ, Romania</span></a>
+          <a class="info margin20 flex row margin-botom" href="tel:0712 345 678"><i class="fa fa-volume-control-phone color-green" aria-hidden="true"></i><span>0712 345 678</span></a>
+      </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/js.js"></script>
+</body>
+</html>
