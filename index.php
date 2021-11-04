@@ -16,7 +16,7 @@
                 <li class="nav-item dropdown">
                     <button onclick="myFunction()" class="dropbtn nav-link">Comenzi</button>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="analiza-discord.html">In asteptare</a>
+                        <a href="analiza-discord.html">dIn asteptare</a>
                         <a href="incepatori.html">Comenzi noi</a>
                         <a href="intermediar.html">Comenzi terminate</a>
                     </div>
