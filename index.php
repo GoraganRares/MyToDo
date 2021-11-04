@@ -20,7 +20,7 @@
                         <a href="incepatori.html">Cgomenzi noi</a>
                         <a href="intermediar.html">Comenzi terminate</a>
                     </div>
-                </li>
+                </li>f
                 <li class="nav-item dropdown">
                     <button onclick="myFunction()" class="dropbtn nav-link">Mesaje</button>
                     <div id="myDropdown" class="dropdown-content">
