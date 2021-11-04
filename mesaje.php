@@ -22,8 +22,6 @@
                </div>
            </div>
 
-           <!-- Searching here hatz hatz hatz-->
-
            <div class="mesaje-users">
               <div class="user-box border-bottom flex">
                   <div class="user-flex">
